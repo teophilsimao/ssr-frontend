@@ -35,7 +35,20 @@ test('renders Link to new doc', () => {
     expect(createNewDocLink.closest('a')).toHaveAttribute('href', '/document/new');
 });
 
-test('renders docs and deletes', async () => {
+test('renders docs', async () => {
+    await act(async () => {
+        render(
+            <Router>
+                <DocList />
+            </Router>
+        );
+    });
+
+    expect(screen.getByText(/Doc 1/i)).toBeInTheDocument();
+    expect(screen.getByText(/Doc 2/i)).toBeInTheDocument();
+});
+
+test('delete button deletes doc', async () => {
     await act(async () => {
         render(
             <Router>
@@ -45,9 +58,6 @@ test('renders docs and deletes', async () => {
     });
 
     const user = userEvent.setup();
-
-    expect(screen.getByText(/Doc 1/i)).toBeInTheDocument();
-    expect(screen.getByText(/Doc 2/i)).toBeInTheDocument();
 
     const deleteButton = screen.getAllByText(/Delete/i)[0];
 
