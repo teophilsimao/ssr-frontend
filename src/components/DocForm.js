@@ -52,32 +52,32 @@ const DocumentForm = () => {
     };
 
     return (
-        <div>
-          <form onSubmit={submitDoc}>
-          <h2>{id ? 'Edit Document' : 'Create New Document'}</h2>
-            <div>
-              <label htmlFor='title'>Title:</label>
-              <input
-                type="text"
-                id='title'
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor='content'>Content:</label>
-              <textarea
-                id='content'
-                value={content}
-                onChange={(e) => setContent(e.target.value)}
-                required
-              />
-            </div>
-            <button type="submit">{id ? 'Save' : 'Create'}</button>
-            <button onClick={() => window.location.href = '/'}>Cancel</button>
-          </form>
-        </div>
+      <div id="form-container">
+        <form onSubmit={submitDoc}>
+        <h2>{id ? 'Edit Document' : 'Create New Document'}</h2>
+          <label htmlFor='title'>Title:</label>
+          <div id="title-container">
+            <input
+              id="title"
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              required
+            />
+          </div>
+          <label htmlFor="content">Content:</label>
+          <div id="textarea-container">
+            <textarea
+              id="content"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit">{id ? 'Save' : 'Create'}</button>
+          <button onClick={() => window.location.href='/'}>Cancel</button>
+        </form>
+      </div>
     );
 };
 
