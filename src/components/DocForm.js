@@ -11,7 +11,7 @@ const DocumentForm = () => {
         const fetchDoc = async () => {
             if (id) {
                 try {
-                    const response = await fetch(`http://localhost:9000/${id}`);
+                    const response = await fetch(`https://jsramverk-editor-anlm19-erd2d2gdhwhsghhe.northeurope-01.azurewebsites.net/${id}`);
                     const data = await response.json();
                     setTitle(data.title);
                     setContent(data.content);
@@ -38,7 +38,7 @@ const DocumentForm = () => {
               body: JSON.stringify(docData)
             };
 
-            const url = id ? `http://localhost:9000/${id}` : 'http://localhost:9000/';
+            const url = id ? `https://jsramverk-editor-anlm19-erd2d2gdhwhsghhe.northeurope-01.azurewebsites.net/${id}` : 'https://jsramverk-editor-anlm19-erd2d2gdhwhsghhe.northeurope-01.azurewebsites.net/';
 
             const response = await fetch(url, requestOptions);
 

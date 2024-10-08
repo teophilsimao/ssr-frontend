@@ -7,7 +7,7 @@ const DocumentList = () => {
     useEffect(() => {
         const fetchDocs = async () => {
             try {
-                const response = await fetch('http://localhost:9000/');
+                const response = await fetch('https://jsramverk-editor-anlm19-erd2d2gdhwhsghhe.northeurope-01.azurewebsites.net/');
                 const data = await response.json()
                 setDocs(data);
             } catch (error) {
@@ -20,7 +20,7 @@ const DocumentList = () => {
 
     const deleteDoc = async (id) => {
         try {
-            const response = await fetch(`http://localhost:9000/${id}`, {
+            const response = await fetch(`https://jsramverk-editor-anlm19-erd2d2gdhwhsghhe.northeurope-01.azurewebsites.net/${id}`, {
                 method: 'DELETE'
             });
 
