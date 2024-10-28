@@ -1,0 +1,16 @@
+.doc-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: $background-color;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, .2);
+}
+
+.doc-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $accent-color;
+}
