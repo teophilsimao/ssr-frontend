@@ -48,16 +48,16 @@ const DocumentList = () => {
     }
 
     return (
-        <div class="content-container">
-            <div class="title-row">
+        <div className="content-container">
+            <div className="title-row">
                 <h2>Documents</h2>
                 < LogoutButton />
             </div>
             <Link to="/documents/new">Create New Document</Link>
 
-                <ul class="doc-list">
+                <ul className="doc-list">
                     {documents.map((doc) => (
-                        <li class="doc-row" key={doc._id}>
+                        <li className="doc-row" key={doc._id}>
                             <Link to={`/documents/${doc._id}/edit`}>{doc.title}</Link>
                             <button onClick={() => deleteDoc(doc._id)}>Delete</button>
                         </li>

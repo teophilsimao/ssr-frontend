@@ -369,13 +369,14 @@ footer {
   justify-content: space-between;
   gap: 2em;
   height: 100%;
+  width: 100%;
 }
 
 .form-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  /*     display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; */
   padding: 20px;
   background-color: #f2f2f2;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);

@@ -43,8 +43,8 @@ const DocumentFormCreate = () => {
     };
 
     return (
-      <div class="content-container">
-        <div class="title-row">
+      <div className="content-container">
+        <div className="title-row">
           <h2>Create New Document</h2>
           < LogoutButton />
         </div>

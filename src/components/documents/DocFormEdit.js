@@ -131,12 +131,29 @@ const DocumentFormEdit = () => {
     }
 
     return (
-      <div class="content-container">
-        <div class="title-row">
+      <div className="content-container">
+        <div className="title-row">
             <h2>Edit Document</h2>
             < LogoutButton />
           </div>
-        <div class="form-container">
+          {id && (
+          <div>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            {message && <p style={{ color: 'green' }}>{message}</p>}
+            <h3>Share Document:</h3>
+              <input
+              type='email'
+              placeholder='Enter email to share'
+              value={shareEmail}
+              onChange={(e) => setShareEmail(e.target.value)} 
+              />
+            <button onClick={shareDoc}>Share document</button>
+            {editorMode === 'code' && (
+                <button onClick={codeMode}>Run code</button>
+            )}
+          </div>
+        )}
+        <div className="form-container">
         <form onSubmit={submitDoc}>
           
           
@@ -185,23 +202,7 @@ const DocumentFormEdit = () => {
           <button onClick={() => navigate('/documents')}>Cancel</button>
         </form>
         </div>
-        {id && (
-          <div>
-            {error && <p style={{ color: 'red' }}>{error}</p>}
-            {message && <p style={{ color: 'green' }}>{message}</p>}
-            <h3>Share Document:</h3>
-              <input
-              type='email'
-              placeholder='Enter email to share'
-              value={shareEmail}
-              onChange={(e) => setShareEmail(e.target.value)} 
-              />
-            <button onClick={shareDoc}>Share document</button>
-            {editorMode === 'code' && (
-                <button onClick={codeMode}>Run code</button>
-            )}
-          </div>
-        )}
+        
       </div>
     );
 };
