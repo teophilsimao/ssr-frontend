@@ -176,6 +176,7 @@ const DocumentFormEdit = () => {
             </select>
             {editorMode === 'text' ? (
               <textarea
+                  style={{height: '1200px'}}
                   id="content"
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
