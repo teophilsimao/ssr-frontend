@@ -13,7 +13,7 @@ const UserLogin = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const url = 'http://localhost:9000/login';
+        const url = 'https://jsramverk-editor-tesi23-beh7hvfadub6fugk.northeurope-01.azurewebsites.net/login';
         const userData = { email, password };
 
         try {

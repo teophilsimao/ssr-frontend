@@ -8,7 +8,7 @@ const DocumentList = () => {
     useEffect(() => {
         const fetchDocs = async () => {
             const token = localStorage.getItem('token');
-            const url = `http://localhost:9000/documents/`;
+            const url = `https://jsramverk-editor-tesi23-beh7hvfadub6fugk.northeurope-01.azurewebsites.net/documents/`;
 
             try {
                 const requestOptions = {
@@ -30,7 +30,7 @@ const DocumentList = () => {
 
     const deleteDoc = async (id) => {
         const token = localStorage.getItem('token');
-        const url = `http://localhost:9000/documents/${id}`;
+        const url = `https://jsramverk-editor-tesi23-beh7hvfadub6fugk.northeurope-01.azurewebsites.net/documents/${id}`;
 
         try {
             const requestOptions = {

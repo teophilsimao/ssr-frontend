@@ -10,7 +10,7 @@ const EmailVerification = () => {
             const params = new URLSearchParams(search);
             const code = params.get('code');
             const email = params.get('email');
-            const url = `http://localhost:9000/verify?code=${code}&email=${email}`;
+            const url = `https://jsramverk-editor-tesi23-beh7hvfadub6fugk.northeurope-01.azurewebsites.net/verify?code=${code}&email=${email}`;
             try {
                 await fetch(`${url}`);
                 navigate('/user-verified');

@@ -15,7 +15,7 @@ const DocumentFormCreate = () => {
         e.preventDefault();
 
         const token = localStorage.getItem('token');
-        const url = 'http://localhost:9000/documents/';
+        const url = 'https://jsramverk-editor-tesi23-beh7hvfadub6fugk.northeurope-01.azurewebsites.net/documents/';
         const docData = { title, content, type: editorMode };
 
         try {

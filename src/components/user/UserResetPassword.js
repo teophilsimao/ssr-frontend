@@ -24,7 +24,7 @@ const UserResetPassword = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const url = 'http://localhost:9000/reset-password';
+        const url = 'https://jsramverk-editor-tesi23-beh7hvfadub6fugk.northeurope-01.azurewebsites.net/reset-password';
         const userData = { email, newPassword: password, token };
 
         try {

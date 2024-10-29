@@ -16,7 +16,7 @@ const DocumentFormEdit = () => {
     useEffect(() => {
         const fetchDoc = async () => {
             const token = localStorage.getItem('token');
-            const url = `http://localhost:9000/documents/${id}`;
+            const url = `https://jsramverk-editor-tesi23-beh7hvfadub6fugk.northeurope-01.azurewebsites.net/documents/${id}`;
 
                 try {
                     const requestOptions = {
@@ -81,7 +81,7 @@ const DocumentFormEdit = () => {
         e.preventDefault();
 
         const token = localStorage.getItem('token');
-        const url = `http://localhost:9000/documents/${id}`;
+        const url = `https://jsramverk-editor-tesi23-beh7hvfadub6fugk.northeurope-01.azurewebsites.net/documents/${id}`;
         const docData = { ...documentState };
         try {
             const requestOptions = {
@@ -103,7 +103,7 @@ const DocumentFormEdit = () => {
 
     const shareDoc = async () => {
         const token = localStorage.getItem('token');
-        const url = `http://localhost:9000/documents/${id}/share`;
+        const url = `https://jsramverk-editor-tesi23-beh7hvfadub6fugk.northeurope-01.azurewebsites.net/documents/${id}/share`;
         const docData = { email: shareEmail };
         try {
             const requestOptions = {
@@ -131,7 +131,7 @@ const DocumentFormEdit = () => {
 
     const codeMode = async () => {
         const token = localStorage.getItem('token');
-        const url = `http://localhost:9000/documents/${id}/codemode`;
+        const url = `https://jsramverk-editor-tesi23-beh7hvfadub6fugk.northeurope-01.azurewebsites.net/documents/${id}/codemode`;
         const docData = { code: btoa(documentState.content) };
 
         try {

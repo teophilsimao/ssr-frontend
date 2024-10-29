@@ -11,7 +11,7 @@ const SocketProvider = ({ children }) => {
     const connectSocket = useCallback((token) => {
         if (socket) return;
 
-        const newSocket = io('http://localhost:9000', { auth: { token } });
+        const newSocket = io('https://jsramverk-editor-tesi23-beh7hvfadub6fugk.northeurope-01.azurewebsites.net', { auth: { token } });
 
         setSocket(newSocket);
 

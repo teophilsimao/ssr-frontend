@@ -22,7 +22,7 @@ const UserRegister = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const url = 'http://localhost:9000/register';
+        const url = 'https://jsramverk-editor-tesi23-beh7hvfadub6fugk.northeurope-01.azurewebsites.net/register';
         const userData = { email, password };
 
         try {
