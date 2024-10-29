@@ -176,14 +176,11 @@ const DocumentFormEdit = () => {
               onChange={(e) => setShareEmail(e.target.value)} 
               />
             <button onClick={shareDoc}>Share document</button>
-              {documentState.type === 'code' && (
-                  <button onClick={codeMode}>Run code</button>
-              )}
           </div>
         )}
         <div className="form-container">
         <form onSubmit={submitDoc}>
-          
+        
           
           <label htmlFor='title'>Title:</label>
           <div id="title-container">
@@ -195,9 +192,12 @@ const DocumentFormEdit = () => {
               required
             />
           </div>
-          
-          <label htmlFor="content">Content:</label>
+          <button onClick={() => navigate('/documents')}>Back to Documents</button>
+              {documentState.type === 'code' && (
+                  <button onClick={codeMode}>Run code</button>
+              )}
           <div id="textarea-container">
+          <label htmlFor="content">Content: (Will be saved automatically) </label>
             <select onChange={(e) => handleFieldChange('type', e.target.value)} value={documentState.type}>
                 <option value="text">Text Editor</option>
                 <option value="code">Code Editor</option>
@@ -227,9 +227,6 @@ const DocumentFormEdit = () => {
               />
             )}
           </div>
-
-          <button type="submit">Save</button>
-          <button onClick={() => navigate('/documents')}>Cancel</button>
         </form>
         </div>
         

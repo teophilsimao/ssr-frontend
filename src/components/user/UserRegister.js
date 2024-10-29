@@ -54,8 +54,8 @@ const UserRegister = () => {
                 <form onSubmit={handleSubmit}>
                     <label htmlFor='email'>Email:</label>
                     <div>
-                        
                         <input
+                            class='login'
                             type='email'
                             id='email'
                             value={email}
