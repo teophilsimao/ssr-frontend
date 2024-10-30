@@ -24,7 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && rsync -av --delete build/ tesi23@ssh.student.bth.se:www/editor",
+    "deploy": "npm run build && rsync -av --delete build/ anlm19@ssh.student.bth.se:www/editor",
     "watch": "sass src/style/style.scss:src/App.css --no-source-map --watch",
     "style": "sass src/style/style.scss:src/App.css --no-source-map"
   },
